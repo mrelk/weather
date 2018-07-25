@@ -52,7 +52,7 @@
 							// Only get last add information to display
 							$results = DB::table('weather_advertising')->count();
 							$advertising = DB::table('weather_advertising')->get();
-							$imgPath = "/img/".$advertising[($results-1)]->picName;
+							$imgPath = "/img/".$advertising[($results-1)]->picname;
 							$videoLink = $liveVideo[0]->offlinelink;
 							//echo $videoLink;
 							//echo $imgPath;
