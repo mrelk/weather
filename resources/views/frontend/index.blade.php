@@ -57,7 +57,7 @@
 							//echo $videoLink;
 							//echo $imgPath;
 							//echo $liveVideo[0]->isLive;
-							if ($liveVideo[0]->isLive == 1) {
+							if ($liveVideo[0]->islive == 1) {
 								$videoLink = $liveVideo[0]->onlinelink;
 							?>
 							<a style="color:#ff0000;text-align:right;">Weather Live Stream</a>
@@ -116,18 +116,18 @@
 						?>
 						<div style="width:30%;text-align:center;">
 							<div style="width:80%;text-align:center;">
-								<img class="img-fluid" src="{{asset("/img/{$info->picPath}")}}" style="width:100%;background-color: transparent; border: 0;" alt="">
+								<img class="img-fluid" src="{{asset("/img/{$info->picpath}")}}" style="width:100%;background-color: transparent; border: 0;" alt="">
 							</div>
 							<div style="height:10px;"></div>
 							<div style="width:70%;text-align:left;color:#eae554;">
-								<a><?php echo $info->serviceTitle;?></a>
+								<a><?php echo $info->servicetitle;?></a>
 							</div>
 							<div style="height:10px;"></div>
 							<div style="width:80%;text-align:left;color:#ffffff;">
 								<a><?php echo $info->description;?></a>
 							</div>
 							<div style="width:80%;text-align:right;">
-								<a href="<?=$info->linkPath;?>"><img class="img-fluid" src="{{ asset('/img/readMoreBtn.png') }}" style="width:60px;" alt=""></a>
+								<a href="<?=$info->linkpath;?>"><img class="img-fluid" src="{{ asset('/img/readMoreBtn.png') }}" style="width:60px;" alt=""></a>
 							</div>
 							<div style="height:10px;"></div>
 						</div>
@@ -214,7 +214,7 @@
 								}
 								for ($subIdx = $nIdx*4; $subIdx < $subLoopEnd; $subIdx++) {
 						?>
-								<a href={{$ourVideo[$subIdx]->linkPath}}><img src="{{ asset("/img/{$ourVideo[$subIdx]->picPath}")}}" alt="" style="width:200px;"></a>
+								<a href={{$ourVideo[$subIdx]->linkpath}}><img src="{{ asset("/img/{$ourVideo[$subIdx]->picpath}")}}" alt="" style="width:200px;"></a>
 						<?php
 								}
 						?>
