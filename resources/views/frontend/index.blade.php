@@ -8,7 +8,7 @@
 				$liveVideo = DB::table('weather_livevideo')->get();
 			?>
 			<div style="width:60%;">
-				<iframe width="100%" height="100%" src="{{ $liveVideo[1]->onlineLink }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				<iframe width="100%" height="100%" src="{{ $liveVideo[1]->onlinelink }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 			</div>
 			<div style="width:40%;background-image:url({{ asset('/img/desBackground.jpg') }});">
 				<div style="width:95%;padding:10px;">
@@ -53,16 +53,16 @@
 							$results = DB::table('weather_advertising')->count();
 							$advertising = DB::table('weather_advertising')->get();
 							$imgPath = "/img/".$advertising[($results-1)]->picName;
-							$videoLink = $liveVideo[0]->offlineLink;
+							$videoLink = $liveVideo[0]->offlinelink;
 							//echo $videoLink;
 							//echo $imgPath;
 							//echo $liveVideo[0]->isLive;
 							if ($liveVideo[0]->isLive == 1) {
-								$videoLink = $liveVideo[0]->onlineLink;
+								$videoLink = $liveVideo[0]->onlinelink;
 							?>
 							<a style="color:#ff0000;text-align:right;">Weather Live Stream</a>
 							<?php } else {
-								$videoLink = $liveVideo[0]->offlineLink;
+								$videoLink = $liveVideo[0]->offlinelink;
 								}// end of liveVideo check
 							?>
 							</div>
