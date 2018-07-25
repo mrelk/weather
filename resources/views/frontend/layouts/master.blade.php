@@ -11,10 +11,10 @@
     <title>@yield('title')</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="{{ asset('css/portfolio-item.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/portfolio-item.css') }}" rel="stylesheet">
 
   </head>
 
@@ -23,8 +23,8 @@
 	@yield('content')
 	@include('frontend.layouts.footer')
     <!-- Bootstrap core JavaScript -->
-    <script src="{{ asset('jquery/jquery.min.js') }}"></script>
-    <script src="{{ asset('bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ secure_asset('jquery/jquery.min.js') }}"></script>
+    <script src="{{ secure_asset('bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
   </body>
 
