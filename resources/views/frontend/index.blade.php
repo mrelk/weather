@@ -10,7 +10,7 @@
 			<div style="width:60%;">
 				<iframe width="100%" height="100%" src="{{ $liveVideo[1]->onlinelink }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 			</div>
-			<div style="width:40%;background-image:url({{ asset('/img/desBackground.jpg') }});">
+			<div style="width:40%;background-image:url({{ secure_asset('/img/desBackground.jpg') }});">
 				<div style="width:95%;padding:10px;">
 				<?php
 					//Get weather_descript table information
@@ -21,7 +21,7 @@
 				  <h6 style="color:#ffffff;"><?= $description[($results-1)]->title; ?></h6>
 				  <h6 style="color:#eae554;"><?= $description[($results-1)]->date; ?></h6>
 				  <h6 style="color:#ffffff;"><?= $description[($results-1)]->short_descript ?></h6>
-				  <a href="#"><img class="img-fluid" src="{{ asset('/img/readMoreBtn.png') }}" style="width:60px;" Align="right" alt=""></a>
+				  <a href="#"><img class="img-fluid" src="{{ secure_asset('/img/readMoreBtn.png') }}" style="width:60px;" Align="right" alt=""></a>
 					<br><br>
 				 </div>
 			</div>
@@ -36,17 +36,17 @@
 					<div style="width:20%;padding:10px;">
 						<div style="height:20px;"></div>
 						<div style="height:275px;padding:0px 0px 0px 30px;">
-							<img src="{{asset('/img/liveVideoTitle.png')}}" style="width:20px;height:150px;" alt="">
+							<img src="{{secure_asset('/img/liveVideoTitle.png')}}" style="width:20px;height:150px;" alt="">
 						</div>
 						<div style="height:10px"></div>
 						<div style="padding:0px 0px 0px 80%;">
-							<img Align="left" src="{{asset('/img/preparation.png')}}" style="width:30px;height:80px;right:0" alt="">
+							<img Align="left" src="{{secure_asset('/img/preparation.png')}}" style="width:30px;height:80px;right:0" alt="">
 						</div>
 					</div>
 					<div style="width:80%;">
 						<div style="height:20px;"></div>
 						<div style="text-align:right;">
-							<img class="right" src="{{asset('/img/liveVideoTip.jpg')}}" style="width:130px;height:30px;" Align=left alt="">
+							<img class="right" src="{{secure_asset('/img/liveVideoTip.jpg')}}" style="width:130px;height:30px;" Align=left alt="">
 							<?php
 							//Get weather_advertising table information
 							// Only get last add information to display
@@ -71,7 +71,7 @@
 						</div>
 						<div style="height:10px"></div>
 						<div >
-							<a href="<?=$advertising[($results-1)]->link;?>"><img class="img-fluid" src="{{ asset('/img/advertising.jpg') }}"  alt=""></a>
+							<a href="<?=$advertising[($results-1)]->link;?>"><img class="img-fluid" src="{{ secure_asset('/img/advertising.jpg') }}"  alt=""></a>
 						</div>
 					</div>
 				</div>
@@ -116,7 +116,7 @@
 						?>
 						<div style="width:30%;text-align:center;">
 							<div style="width:80%;text-align:center;">
-								<img class="img-fluid" src="{{asset("/img/{$info->picpath}")}}" style="width:100%;background-color: transparent; border: 0;" alt="">
+								<img class="img-fluid" src="{{secure_asset("/img/{$info->picpath}")}}" style="width:100%;background-color: transparent; border: 0;" alt="">
 							</div>
 							<div style="height:10px;"></div>
 							<div style="width:70%;text-align:left;color:#eae554;">
@@ -127,7 +127,7 @@
 								<a><?php echo $info->description;?></a>
 							</div>
 							<div style="width:80%;text-align:right;">
-								<a href="<?=$info->linkpath;?>"><img class="img-fluid" src="{{ asset('/img/readMoreBtn.png') }}" style="width:60px;" alt=""></a>
+								<a href="<?=$info->linkpath;?>"><img class="img-fluid" src="{{ secure_asset('/img/readMoreBtn.png') }}" style="width:60px;" alt=""></a>
 							</div>
 							<div style="height:10px;"></div>
 						</div>
@@ -157,7 +157,7 @@
 				<div><?php echo $service;?></div>
 			</div>
 		</div>
-		<div class="row" style="background-image:url({{ asset('/img/lastVideoServiceBk.jpg') }});">
+		<div class="row" style="background-image:url({{ secure_asset('/img/lastVideoServiceBk.jpg') }});">
 
 			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="width:100%;text-align:center;padding:40px;">
 				<h1 style="color:#ffffff;">氣象影音</h1>
@@ -214,7 +214,7 @@
 								}
 								for ($subIdx = $nIdx*4; $subIdx < $subLoopEnd; $subIdx++) {
 						?>
-								<a href={{$ourVideo[$subIdx]->linkpath}}><img src="{{ asset("/img/{$ourVideo[$subIdx]->picpath}")}}" alt="" style="width:200px;"></a>
+								<a href={{$ourVideo[$subIdx]->linkpath}}><img src="{{ secure_asset("/img/{$ourVideo[$subIdx]->picpath}")}}" alt="" style="width:200px;"></a>
 						<?php
 								}
 						?>
