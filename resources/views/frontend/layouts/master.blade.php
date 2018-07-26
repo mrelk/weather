@@ -45,11 +45,11 @@ var chart = new CanvasJS.Chart("chartContainer", {
 			{ x: new Date("2018-07-17T21:00:00+08:00"),  y: 32 },
 			{ x: new Date("2018-07-18T00:00:00+08:00"),  y: 32 },
 			{ x: new Date("2018-07-18T03:00:00+08:00"),  y: 30 }
-			
+
 		]
  	},
 	{
-		type: "splineArea", 
+		type: "splineArea",
 		showInLegend: true,
 		name: "Office Cost",
 		yValueFormatString: "$#,##0",
@@ -80,10 +80,10 @@ chart.render();
     <title>@yield('title')</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="{{ asset('css/portfolio-item.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/portfolio-item.css') }}" rel="stylesheet">
 
   </head>
 
@@ -93,7 +93,7 @@ chart.render();
 		height: 100%;
 		position: relative;
 	}
- 
+
 	.circle {
 		background-color: RGB(239, 89, 90);
 		position: absolute;
@@ -104,10 +104,10 @@ chart.render();
 	@yield('content')
 	@include('frontend.layouts.footer')
     <!-- Bootstrap core JavaScript -->
-    <script src="{{ asset('jquery/jquery.min.js') }}"></script>
-    <script src="{{ asset('bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-	<script src="{{ asset('jquery/canvasjs.min.js') }}"></script>
-					
+    <script src="{{ secure_asset('jquery/jquery.min.js') }}"></script>
+    <script src="{{ secure_asset('bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+	<script src="{{ secure_asset('jquery/canvasjs.min.js') }}"></script>
+
   </body>
 
 </html>
