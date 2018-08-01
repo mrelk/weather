@@ -5,18 +5,18 @@
 	<div class="container">
 		<div class="row">
 			<?php
-				$liveVideo = DB::table('weather_livevideo')->get();
+				$liveVideo = DB::table('livevideo')->get();
 			?>
 			<div style="width:60%;">
-				<iframe width="100%" height="100%" src="{{ $liveVideo[1]->onlinelink }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				<iframe width="100%" height="100%" src="{{ $liveVideo[1]->online_link }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 			</div>
 			<div style="width:40%;background-image:url({{ secure_asset('/img/desBackground.jpg') }});">
 				<div style="width:95%;padding:10px;">
 				<?php
-					//Get weather_descript table information
+					//Get descript table information
 					// Only get last add information to display
-					$results = DB::table('weather_description')->count();
-					$description = DB::table('weather_description')->get();
+					$results = DB::table('description')->count();
+					$description = DB::table('description')->get();
 				?>
 				  <h6 style="color:#ffffff;"><?= $description[($results-1)]->title; ?></h6>
 				  <h6 style="color:#eae554;"><?= $description[($results-1)]->date; ?></h6>
@@ -275,21 +275,21 @@
 						<div style="text-align:right;">
 							<img class="right" src="{{secure_asset('/img/liveVideoTip.jpg')}}" style="width:130px;height:30px;" Align=left alt="">
 							<?php
-							//Get weather_advertising table information
+							//Get advertising table information
 							// Only get last add information to display
-							$results = DB::table('weather_advertising')->count();
-							$advertising = DB::table('weather_advertising')->get();
+							$results = DB::table('advertising')->count();
+							$advertising = DB::table('advertising')->get();
 							$imgPath = "/img/".$advertising[($results-1)]->picname;
-							$videoLink = $liveVideo[0]->offlinelink;
+							$videoLink = $liveVideo[0]->offline_link;
 							//echo $videoLink;
 							//echo $imgPath;
 							//echo $liveVideo[0]->isLive;
 							if ($liveVideo[0]->islive == 1) {
-								$videoLink = $liveVideo[0]->onlinelink;
+								$videoLink = $liveVideo[0]->online_link;
 							?>
 							<a style="color:#ff0000;text-align:right;">Weather Live Stream</a>
 							<?php } else {
-								$videoLink = $liveVideo[0]->offlinelink;
+								$videoLink = $liveVideo[0]->offline_link;
 								}// end of liveVideo check
 							?>
 							</div>
@@ -391,8 +391,8 @@
 				<h3 style="color:#ffffff;"><font color="#ffffff">OUR</font> <font color="#eae554">VIDEO</font></h3>
 				<!-- Indicators -->
 				<?php
-					$results = DB::table('weather_ourvideo')->count();
-					$ourVideo = DB::table('weather_ourvideo')->get();
+					$results = DB::table('ourvideo')->count();
+					$ourVideo = DB::table('ourvideo')->get();
 				?>
 
 				<div id="demo" class="carousel slide" data-ride="carousel">
