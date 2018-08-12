@@ -13,7 +13,7 @@ class CreateTaiwanLocationTable extends Migration
      */
     public function up()
     {
-        Schema::create('taiwan_location', function (Blueprint $table) {
+        Schema::create('taiwan_locations', function (Blueprint $table) {
             $table->increments('id');
             $table->string('city_name');
             $table->string('town_name');
@@ -28,6 +28,6 @@ class CreateTaiwanLocationTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('taiwan_location');
+        Schema::dropIfExists('taiwan_locations');
     }
 }

@@ -13,7 +13,7 @@ class CreateOurvideoTable extends Migration
      */
     public function up()
     {
-        Schema::create('ourvideo', function (Blueprint $table) {
+        Schema::create('ourvideos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('pic_path');
             $table->string('link_path');
@@ -29,6 +29,6 @@ class CreateOurvideoTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ourvideo');
+        Schema::dropIfExists('ourvideos');
     }
 }

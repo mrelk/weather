@@ -13,7 +13,7 @@ class CreateLivevideoTable extends Migration
      */
     public function up()
     {
-        Schema::create('livevideo', function (Blueprint $table) {
+        Schema::create('livevideos', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('islive');
             $table->string('online_link');
@@ -29,6 +29,6 @@ class CreateLivevideoTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('livevideo');
+        Schema::dropIfExists('livevideos');
     }
 }
